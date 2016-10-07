@@ -1,0 +1,18 @@
+<div class="container container--align-center">
+  <h4>Insert the link to where the music is stored.</h4>
+  {{input value=url}}
+
+  <button {{action "clone" value}}>Go get it!</button>
+
+  <div class="container row">
+    {{#if isError}}
+      <p class="error-text">Error loading data</p>
+    {{else if isLoading}}
+      <h1>{{inline-svg "loader"}}</h1>
+    {{else if isLoaded}}
+      {{#link-to 'edit-song' url}}Lets edit the song!{{/link-to}}
+    {{/if}}
+  </div>
+</div>
+
+{{yield}}

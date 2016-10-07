@@ -1,0 +1,7 @@
+{{#if isPlaying}}
+  <button {{action "stop"}}>Stop</button>
+{{else}}
+  <button {{action "play"}}>Play</button>
+{{/if}}
+
+{{yield}}

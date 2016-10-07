@@ -1,0 +1,32 @@
+body {
+  background: #4DA0B0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4DA0B0 , #D39D38); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4DA0B0 , #D39D38); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+button {
+  border: 1px solid #fff;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.container {
+  padding-top: calc(50% - 50vh);
+
+  &--align-center {
+    text-align: center;
+  }
+}
+
+.error-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: darkred;
+}
