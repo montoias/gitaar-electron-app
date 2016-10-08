@@ -3,18 +3,22 @@
 
   <h5>{{name}}</h5>
 
-  <button {{action "commitAndPush"}}>Submit changes</button>
+  {{#if isCommiting}}
+    {{inline-svg "loader"}}
+  {{else}}
+    <button {{action "commitAndPush"}}>Submit changes</button>
 
-  <div class="row">
-    <div class="one-half column">
-      <h5>Versioned</h5>
-      {{play-midi url='https://rawgit.com/DaniFrancisco/gitaar-midis/master/super-cool-song.mid'}}
+    <div class="row">
+      <div class="one-half column">
+        <h5>Versioned</h5>
+        {{play-midi url='https://rawgit.com/DaniFrancisco/gitaar-midis/master/super-cool-song.mid'}}
+      </div>
+      <div class="one-half column">
+        <h5>Local</h5>
+        {{play-midi url='https://rawgit.com/DaniFrancisco/gitaar-midis/master/super-cool-song.mid'}}
+      </div>
     </div>
-    <div class="one-half column">
-      <h5>Local</h5>
-      {{play-midi url='https://rawgit.com/DaniFrancisco/gitaar-midis/master/super-cool-song.mid'}}
-    </div>
-  </div>
+  {{/if}}
 </div>
 
 {{yield}}
